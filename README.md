@@ -117,7 +117,7 @@ python cluster_stages.py
 Train 5-class classifier:
 python train_stage_classifier.py
 ```
-#🛠️ Tech Stack
+##🛠️ Tech Stack
 
 Python 3.x
 
@@ -133,7 +133,7 @@ Matplotlib
 
 OpenCV
 
-#🌟 Key Achievements
+##🌟 Key Achievements
 
 ✔ 99% accuracy on binary cancer detection
 
@@ -145,7 +145,7 @@ OpenCV
 
 ✔ Scalable pipeline suitable for clinical workflows
 
-#🔮 Future Enhancements
+##🔮 Future Enhancements
 
 Extend to whole-slide images (WSI)
 
@@ -157,11 +157,11 @@ Apply self-supervised learning (SimCLR, MoCo)
 
 Incorporate clinical metadata for multimodal predictions
 
-#📄 License
+##📄 License
 
 MIT License © 2025
 
-🤝 Acknowledgements
+##🤝 Acknowledgements
 
 LC25000 Dataset
 
