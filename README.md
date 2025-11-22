@@ -1,126 +1,105 @@
-🧬 Colorectal Cancer Detection & Stage Estimation Using Deep Learning + Unsupervised Clustering
+# 🧬 Colorectal Cancer Detection & Stage Estimation Using Deep Learning + Unsupervised Clustering
 
-This project presents a hybrid AI pipeline capable of detecting colorectal cancer from histopathology images and estimating its cancer stage without requiring manually labeled stage data.
-The system uses VGG16 transfer learning, deep feature embeddings, KMeans clustering, and a final 5-class classifier to predict:
+This project presents a **hybrid AI pipeline** capable of detecting colorectal cancer from histopathology images and estimating its stage **without requiring manually labeled stage data**.  
+The system uses **VGG16 transfer learning**, **deep feature embeddings**, **KMeans clustering**, and a **final 5-class classifier** to predict:
 
-Normal tissue
+- **Normal tissue**
+- **Cancer Stage 1**
+- **Cancer Stage 2**
+- **Cancer Stage 3**
+- **Cancer Stage 4**
 
-Cancer Stage 1
+The model achieves **99% accuracy** for cancer detection and **93% accuracy** for stage prediction.
 
-Cancer Stage 2
+---
 
-Cancer Stage 3
+## 🚀 Project Highlights
 
-Cancer Stage 4
+- 🔬 **Binary cancer detection** using VGG16 (99% accuracy)
+- 🤖 **Automatic stage discovery** with KMeans clustering
+- 🧠 **5-class classifier** trained on cluster-derived labels (93% accuracy)
+- 📊 PCA cluster visualization for explainability
+- 🧮 Confusion matrix + accuracy/loss curves for evaluation
+- 🏥 Designed for real-world digital pathology workflows
+- 💡 Works **without stage labels** — fully annotation-efficient
 
-The model achieves 99% accuracy for cancer detection and 93% accuracy for stage prediction.
+---
 
-🚀 Project Highlights
+## 📁 Dataset
 
-🔬 Binary cancer detection using VGG16 (99% accuracy)
+**LC25000 Colon Histopathology Dataset**
 
-🤖 Automatic stage discovery using KMeans clustering on deep embeddings
+- `colon_n` — Normal tissue  
+- `colon_aca` — Adenocarcinoma (malignant)
 
-🧠 5-class stage classifier trained on cluster-derived labels (93% accuracy)
+Malignant images are embedded using VGG16 and clustered into **4 stage groups** with KMeans.
 
-📊 PCA cluster visualization for explainability
-
-🧮 Confusion matrix + accuracy/loss curves for evaluation
-
-🏥 Designed for real-world digital pathology workflows
-
-💡 Requires no stage labels — fully annotation-efficient
-
-📁 Dataset
-
-LC25000 Colon Histopathology Dataset
-
-Classes used:
-
-colon_n — Normal tissue
-
-colon_aca — Adenocarcinoma (malignant)
-
-Malignant class further divided into 4 clusters using KMeans
-
-📌 Dataset source:
+📌 Dataset source:  
 https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathological-images
 
-Dataset Pipeline:
+---
 
-Load images from colon_n and colon_aca
+## 🧠 Model Architecture
 
-Train VGG16 binary classifier
+### **1️⃣ Binary Cancer Detector (VGG16)**
+- Transfer learning from ImageNet  
+- Output: Normal / Cancer  
+- Accuracy: **99%**
 
-Extract 4096-dim embeddings for malignant samples
+### **2️⃣ Deep Feature Embeddings**
+- Extracted from VGG16 FC layer  
+- 4096-dimensional embedding vectors
 
-Cluster embeddings into 4 stage groups
+### **3️⃣ KMeans Stage Clustering**
+- Clusters malignant embeddings into 4 groups  
+- Used as surrogate stage labels
 
-Train final 5-class classifier
+### **4️⃣ Final 5-Class Stage Classifier**
+- Predicts: Normal + Stages 1–4  
+- Accuracy: **93%**
 
-🧠 Model Architecture
-1️⃣ VGG16 Binary Cancer Detector
+---
 
-Input: 224×224 histopathology image
+## 📊 Visual Results
 
-Output: Normal / Cancer
+### **Binary Classification Performance**
+**(Insert your images)**  
+- Accuracy Curve  
+- Loss Curve  
 
-Accuracy: 99%
+---
 
-2️⃣ Deep Embedding Extractor
+### **KMeans Clustering Visualization**
+**(Insert PCA Cluster Plot)**
 
-Extracts 4096-dim features from VGG16’s FC layer
+---
 
-3️⃣ KMeans Stage Clustering
+### **Stage Classification Performance**
+**(Insert Accuracy Curve + Confusion Matrix)**
 
-Clusters malignant embeddings into 4 groups
+---
 
-Provides surrogate stage labels
+## 📂 Project Structure
+├── binary_model/ # VGG16 cancer detection model
+├── feature_extraction/ # Deep embedding extraction
+├── clustering/ # KMeans clustering + PCA
+├── stage_classifier/ # 5-class stage classifier
+├── Final_Dataset/ # Dataset after clustering
+├── results/ # Plots: accuracy, loss, PCA, confusion matrix
+├── block_diagram.png # Pipeline architecture diagram
+├── README.md # Documentation
+└── requirements.txt # Dependencies
 
-4️⃣ Five-Class Stage Classifier
 
-Learns to classify:
+---
 
-Normal
-
-Stage 1
-
-Stage 2
-
-Stage 3
-
-Stage 4
-
-Accuracy: 93%
-
-📊 Visual Results
-Binary Classification Performance
-Accuracy	Loss
-(Insert Fig 1)	(Insert Fig 2)
-KMeans Clustering Visualization
-PCA Cluster Plot
-(Insert Fig 3)
-Stage Classification Performance
-5-Class Accuracy Curve	Confusion Matrix
-(Insert Fig 4)	(Insert Fig 5)
-📂 Project Structure
-├── binary_model/                # VGG16 cancer detection model
-├── feature_extraction/          # Deep embedding extraction scripts
-├── clustering/                  # KMeans clustering + PCA visualization
-├── stage_classifier/            # 5-class classifier training
-├── Final_Dataset/               # Dataset used after clustering
-├── results/                     # Accuracy plots, PCA, confusion matrix
-├── block_diagram.png            # Pipeline architecture
-├── README.md                    # Project documentation
-└── requirements.txt             # Dependencies
-
-💻 Installation & Usage
+## 💻 Installation & Usage
 
 Clone the repository:
 
+```bash
 git clone https://github.com/yourusername/colorectal-cancer-staging.git
 cd colorectal-cancer-staging
-
 
 Install dependencies:
 
@@ -137,55 +116,3 @@ python cluster_stages.py
 
 Train 5-class classifier:
 python train_stage_classifier.py
-
-🛠️ Tech Stack
-
-Python 3
-
-TensorFlow / Keras
-
-VGG16 Transfer Learning
-
-Scikit-Learn (KMeans, PCA)
-
-NumPy
-
-Matplotlib
-
-OpenCV
-
-🌟 Key Achievements
-
-✔ 99% accuracy on binary cancer detection
-
-✔ 93% accuracy on final stage classification
-
-✔ Fully automated staging without labelled stages
-
-✔ PCA-based cluster explainability
-
-✔ High-quality confusion matrix performance
-
-🔮 Future Enhancements
-
-Train on whole-slide images (WSI)
-
-Integrate ViT/Transformers for richer embeddings
-
-Deploy as a web app (Streamlit / Flask)
-
-Apply self-supervised learning (SimCLR, MoCo)
-
-Multi-modal fusion (image + clinical metadata)
-
-📄 License
-
-MIT License © 2025
-
-🤝 Acknowledgements
-
-LC25000 Dataset (Kaggle)
-
-TensorFlow / Keras
-
-Medical researchers involved in colorectal cancer pathology
