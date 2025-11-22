@@ -80,15 +80,15 @@ https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathologica
 ---
 
 ## 📂 Project Structure
-├── binary_model/ # VGG16 cancer detection model
-├── feature_extraction/ # Deep embedding extraction
-├── clustering/ # KMeans clustering + PCA
-├── stage_classifier/ # 5-class stage classifier
-├── Final_Dataset/ # Dataset after clustering
-├── results/ # Plots: accuracy, loss, PCA, confusion matrix
-├── block_diagram.png # Pipeline architecture diagram
-├── README.md # Documentation
-└── requirements.txt # Dependencies
+├── binary_model/
+├── feature_extraction/
+├── clustering/
+├── stage_classifier/
+├── Final_Dataset/ 
+├── results/
+├── block_diagram.png
+├── README.md
+└── requirements.txt
 
 
 ---
