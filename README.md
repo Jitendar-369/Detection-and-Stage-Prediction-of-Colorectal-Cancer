@@ -98,7 +98,7 @@ https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathologica
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/colorectal-cancer-staging.git
+git clone https://github.com/Jitendar-369/Detection-and-Stage-Prediction-of-Colorectal-Cancer.git
 cd colorectal-cancer-staging
 
 Install dependencies:
@@ -116,3 +116,55 @@ python cluster_stages.py
 
 Train 5-class classifier:
 python train_stage_classifier.py
+
+🛠️ Tech Stack
+
+Python 3.x
+
+TensorFlow / Keras
+
+VGG16
+
+Scikit-Learn (KMeans, PCA)
+
+NumPy
+
+Matplotlib
+
+OpenCV
+
+🌟 Key Achievements
+
+✔ 99% accuracy on binary cancer detection
+
+✔ 93% accuracy on final 5-class stage classification
+
+✔ Fully automated staging without stage labels
+
+✔ PCA + confusion matrix visualizers
+
+✔ Scalable pipeline suitable for clinical workflows
+
+🔮 Future Enhancements
+
+Extend to whole-slide images (WSI)
+
+Use transformer-based models (ViT, Swin)
+
+Deploy as a web app (Flask/Streamlit)
+
+Apply self-supervised learning (SimCLR, MoCo)
+
+Incorporate clinical metadata for multimodal predictions
+
+📄 License
+
+MIT License © 2025
+
+🤝 Acknowledgements
+
+LC25000 Dataset
+
+TensorFlow / Keras
+
+Medical research in colorectal cancer pathology
