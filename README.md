@@ -132,6 +132,7 @@ NumPy
 Matplotlib
 
 OpenCV
+---
 
 ##🌟 Key Achievements
 
@@ -144,6 +145,7 @@ OpenCV
 ✔ PCA + confusion matrix visualizers
 
 ✔ Scalable pipeline suitable for clinical workflows
+---
 
 ##🔮 Future Enhancements
 
@@ -156,6 +158,7 @@ Deploy as a web app (Flask/Streamlit)
 Apply self-supervised learning (SimCLR, MoCo)
 
 Incorporate clinical metadata for multimodal predictions
+---
 
 ## 📄 License
 
@@ -169,3 +172,4 @@ LC25000 Dataset
 TensorFlow / Keras
 
 Medical research in colorectal cancer pathology
+---
