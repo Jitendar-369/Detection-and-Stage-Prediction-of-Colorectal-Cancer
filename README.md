@@ -158,18 +158,20 @@ Deploy as a web app (Flask/Streamlit)
 Apply self-supervised learning (SimCLR, MoCo)
 
 Incorporate clinical metadata for multimodal predictions
----
+
 
 ## 📄 License
-
-MIT License © 2025
 ---
 
+MIT License © 2025
+
+
 ##🤝 Acknowledgements
+---
 
 LC25000 Dataset
 
 TensorFlow / Keras
 
 Medical research in colorectal cancer pathology
----
+
