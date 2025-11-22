@@ -157,9 +157,10 @@ Apply self-supervised learning (SimCLR, MoCo)
 
 Incorporate clinical metadata for multimodal predictions
 
-##📄 License
+## 📄 License
 
 MIT License © 2025
+---
 
 ##🤝 Acknowledgements
 
